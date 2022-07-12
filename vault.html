@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaulter</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+
+    <link href="assets/fontawesome/css/all.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a id="logo" class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fw-bolder" href="index.html">FishMan</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="w-100"></div>
+        <div class="navbar-nav bg-secondary">
+            <div class="nav-item text-nowrap">
+                <a class="nav-link px-3 text-dark" href="login.html"> <i class="fa fa-sign-out me-2"></i>Sign out</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link " href="index.html">
+                                <i class="fa fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="vault.html">
+                                <i class="fa fa-truck"></i>
+                                <span>Vault</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pos.html">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>POS</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="finance.html">
+                                <i class="fa fa-calculator"></i>
+                                <span>Finances</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="stock.html">
+                                <i class="fa fa-recycle"></i>
+                                <span>Restock</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="user-mgt.html">
+                                <i class="fa fa-users"></i>
+                                <span>User Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="settings.html">
+                                <i class="fa fa-cog"></i>
+                                <span>Settings</span>
+                            </a>
+                        </li>
+
+                        <li class="mt-4">
+                            <div class="text-center">
+
+                                <button type="button" class="btn btn-dark  text-white rounded-circle"
+                                    id="sidebarToggle">
+                                    <i class="fa fa-lg fa-chevron-left"></i>
+                                </button>
+
+                                <button type="button" class="btn btn-dark  text-white rounded-circle  d-none"
+                                    id="sidebarToggle2">
+                                    <i class="fa fa-lg fa-chevron-right text-white "></i>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Vaulter</h1>
+                </div>
+
+
+
+                <div class="row">
+                    <form action="" class="col-md-8 border-end pe-5">
+                        <div class="mb-3 row">
+                            <div class="col-md-6">
+                                <label for="exampleFormControlInput1" class="form-label">Type</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected disabled>Select...</option>
+                                    <option value="1">Fish</option>
+                                    <option value="2">Chicken</option>
+                                    <option value="3">Egg</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="exampleFormControlInput1" class="form-label">Sub-type</label>
+                                <select class="form-select " aria-label="Default select example">
+                                    <option selected disabled>Select...</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="mb-3 row">
+                            <div class="col-md-4">
+                                <label for="exampleFormControlInput1" class="form-label">Vaulting?</label>
+                                <select class="form-select " aria-label="Default select example">
+                                    <option selected disabled>Select...</option>
+                                    <option value="1">Single</option>
+                                    <option value="2">Carton</option>
+                                </select>
+                            </div>
+                            <div class="col-md-8">
+                                <label for="exampleFormControlInput1" class="form-label">Quantity</label>
+                                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder=""
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <div class="col-md-6"> <label for="exampleFormControlInput1" class="form-label">Size</label>
+
+                                <div class="input-group">
+                                    <span class="input-group-text" id="basic-addon1">kg</span>
+                                    <input type="number" class="form-control" placeholder="e.g 10kg"
+                                        aria-label="Username" aria-describedby="basic-addon1" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6"> <label for="exampleFormControlInput1"
+                                    class="form-label">Price</label>
+
+                                <div class="input-group">
+                                    <span class="input-group-text" id="basic-addon1">&#8358;</span>
+                                    <input type="number" class="form-control" placeholder="e.g &#8358;25,000.00"
+                                        aria-label="Username" aria-describedby="basic-addon1" disabled readonly
+                                        required>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Notes
+                                <small>(optional)</small></label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="Text here..."></textarea>
+                        </div>
+
+                        <button type="button" class="btn btn-danger">Cancel</button>
+
+
+                        <div class="float-end mb-3">
+                            <button type="button" class="btn btn-secondary">Clear</button>
+                            <button type="submit" class="btn btn-outline-success  btn-lg">Submit</button>
+                        </div>
+
+                    </form>
+
+                    <div class="col-md-4 ps-5">
+                        <h5>Vault Report</h5>
+                        <form action="" class="mt-4">
+                            <div class="mb-3 row">
+                                <label for="staticEmail" class="col-sm-2 col-form-label">From</label>
+                                <div class="col-sm-10">
+                                    <input type="date" class="form-control" id="staticEmail">
+                                </div>
+                            </div>
+                            <div class="mb-3 row">
+                                <label for="inputPassword" class="col-sm-2 col-form-label">To</label>
+                                <div class="col-sm-10">
+                                    <input type="date" class="form-control" id="inputPassword">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fas fa-print"></i> Print</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                            class="fas fa-file-pdf"></i> Export</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="my-5">
+
+                    <div class="row border-bottom mb-3">
+
+                        <div class="col-auto">
+                            <h4>Invault</h4>
+                        </div>
+                    </div>
+
+                    <table class=" table cell-border" id="invaultTbl">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Timestamp</th>
+                                <th scope="col">Product <br> <small class="fw-light">{type/subtype}</small></th>
+                                <th scope="col">Size(kg) <br> <small class="fw-light">{Remainder/Total}</small></th>
+                                <th scope="col">Qty</th>
+                                <th scope="col">Amount(&#8358;) <br> <small class="fw-light">{Remainder/Total}</small></th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"></th>
+                                <td>Wed 23, March 2022</td>
+                                <td>Fish<b> / </b>Tilapia</td>
+                                <td>50<b> / </b>200</td>
+                                <td>45</td>
+                                <td>35,000<b> / </b>435,000</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-undo-alt"></i>
+                                        Vomit</button>
+                                    <button class="btn btn-sm btn-dark"><i class="fas fa-fast-forward"></i> Carry
+                                        Over</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"></th>
+                                <td>Thurs 24 March 2022</td>
+                                <td>Chicken<b> / </b>Broiler</td>
+                                <td>50<b> / </b>50</td>
+                                <td>15</td>
+                                <td>15,000<b> / </b>75,000</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-secondary"><i class="fas fa-undo-alt"></i>
+                                        Vomit</button>
+                                    <button class="btn btn-sm btn-dark"><i class="fas fa-fast-forward"></i> Carry
+                                        Over</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
